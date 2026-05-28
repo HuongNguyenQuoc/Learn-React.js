@@ -54,7 +54,7 @@ describe('Product component', () => {
     render(<Product product={product} loadCart={loadCart} />);
 
     const user = userEvent.setup();
-    const addToCartButton = screen.getByTestId('add-to-cart-button')
+    const addToCartButton = screen.getByTestId('add-to-cart-button');
     await user.click(addToCartButton);
 
     expect(axios.post).toHaveBeenCalledWith('/api/cart-items', {
